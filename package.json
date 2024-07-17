@@ -1,0 +1,34 @@
+{
+  "name": "chai-mocha-unit-testing",
+  "version": "1.0.0",
+  "description": "This is a Unit Testing Repo.",
+  "main": "app.ts",
+  "type": "module",
+  "scripts": {
+    "test": "nyc mocha",
+    "nyctest": "nyc --reporter=lcov --reporter=text-lcov --all -x \"./node_modules/*\" -x \"./coverage/*\" check-coverage --lines 10 --functions 90 npm run unittest",
+    "tsc": "node ./node_modules/typescript/bin/tsc",
+    "postinstall": "npm run tsc ",
+    "start": "nodemon -w . --ext ts --exec ts-node ./index.ts"
+  },
+  "keywords": [
+    "Rajesh Pattanaik",
+    "Mocha",
+    "Chai",
+    "Unit Testing",
+    "Testing Backend !"
+  ],
+  "author": "Rajesh Pattanaik",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.7",
+    "chai": "^5.1.1",
+    "mocha": "^10.6.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "nyc": "^17.0.0"
+  }
+}
